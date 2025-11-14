@@ -1,31 +1,65 @@
 import 'package:flutter/material.dart';
-void main() => runApp(const MyApp());
+import 'pages/sparate_list_view.dart';
+import 'pages/list_view_sparate_horizontal.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
 class MyApp extends StatelessWidget {
-const MyApp({super.key});
-@override
-Widget build(BuildContext context) {
-return MaterialApp(
-title: 'Custom Fonts',
+  const MyApp({super.key});
 
-theme: ThemeData(fontFamily: 'Raleway'),
-home: const MyHomePage(),
-);
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Demo ListView Separated',
+      theme: ThemeData(
+        useMaterial3: true,
+        colorSchemeSeed: Colors.blue,
+      ),
+      home: const HomePage(),
+      debugShowCheckedModeBanner: false,
+    );
+  }
 }
-}
-class MyHomePage extends StatelessWidget {
-const MyHomePage({super.key});
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
 
-appBar: AppBar(title: const Text('Custom Fonts')),
-body: const Center(
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
 
-child: Text(
-'Roboto Mono sample',
-style: TextStyle(fontFamily: 'Roboto Bold', fontSize: 24),
-),
-),
-);
-}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Menu ListView Separated'),
+      ),
+      body: ListView(
+        padding: const EdgeInsets.all(16.0),
+        children: [
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (_) => const SparateListViewPage(),
+                ),
+              );
+            },
+            child: const Text('ListView Separated Vertical'),
+          ),
+          const SizedBox(height: 12),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (_) => const HorizontalSparateListViewPage(),
+                ),
+              );
+            },
+            child: const Text('ListView Separated Horizontal'),
+          ),
+        ],
+      ),
+    );
+  }
 }

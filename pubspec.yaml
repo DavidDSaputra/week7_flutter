@@ -79,7 +79,7 @@ flutter:
         - asset: assets/fonts/raleway/Raleway-Regular.ttf
         - asset: assets/fonts/raleway/Raleway-Italic.ttf
           style: italic
-    - family: Roboto Bold
+    - family: Roboto
       fonts:
         - asset: assets/fonts/roboto/Roboto-Regular.ttf
         - asset: assets/fonts/roboto/Roboto-Bold.ttf
