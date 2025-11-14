@@ -73,21 +73,17 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-
- fonts:
-  - family: Raleway
   fonts:
-  - asset: fonts/Raleway-Regular.ttf
-  - asset: fonts/Raleway-Italic.ttf
-  style: italic
-  - family: RobotoMono
-  fonts:
-  - asset: fonts/RobotoMono-Regular.ttf
-  - asset: fonts/RobotoMono-Bold.ttf
+    - family: Raleway
+      fonts:
+        - asset: assets/fonts/raleway/Raleway-Regular.ttf
+        - asset: assets/fonts/raleway/Raleway-Italic.ttf
+          style: italic
+    - family: Roboto Bold
+      fonts:
+        - asset: assets/fonts/roboto/Roboto-Regular.ttf
+        - asset: assets/fonts/roboto/Roboto-Bold.ttf
+          weight: 700
 
-weight: 700
-uses-material-design: true
-  #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
